@@ -1,0 +1,11 @@
+<!-- directivos/templates/directivos/add_directivo.html -->
+{% extends 'mi_pagina/base.html' %}
+
+{% block content %}
+<h2>Agregar Directivo</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}

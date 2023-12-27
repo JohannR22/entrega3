@@ -1,0 +1,30 @@
+<!-- mi_pagina/templates/mi_pagina/base.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Proyecto Django</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Empresa XYZ</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'add_directivo' %}">Agregar Directivo</a> |
+        <a href="{% url 'add_empleado' %}">Agregar Empleado</a> |
+        <a href="{% url 'add_producto' %}">Agregar Producto</a>
+    </nav>
+
+    <main>
+        {% block content %}
+        <!-- El contenido específico de cada página irá aquí -->
+        {% endblock content %}
+    </main>
+
+    <footer>
+        <p>© 2023 Empresa XYZ</p>
+    </footer>
+</body>
+</html>
