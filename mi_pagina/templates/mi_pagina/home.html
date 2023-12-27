@@ -1,5 +1,5 @@
 {% load static %}
-<!-- mi_pagina/templates/mi_pagina/base.html -->
+<!-- mi_pagina/templates/mi_pagina/home.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenido a la Empresa XYZ</h1>
+        <h1>Bienvenido a la Empresa Johann</h1>
     </header>
 
     <nav>
@@ -20,7 +20,13 @@
 
     <main>
         {% block content %}
-        <!-- El contenido específico de cada página irá aquí -->
+        <!-- Aquí comienza el formulario de búsqueda -->
+        <form method="get" action="{% url 'home' %}">
+            <input type="text" name="nombre" placeholder="Buscar producto por nombre">
+            <button type="submit">Buscar</button>
+        </form>
+        <!-- Aquí termina el formulario de búsqueda -->
+
         {% endblock content %}
     </main>
 
